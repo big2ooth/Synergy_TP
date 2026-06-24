@@ -34,26 +34,60 @@
     directory is changed to ~/Synergy_TP 
 
 # 5. mkdir
-    function: 
+    function: creates new directories
+    command used: 
+    $ mkdir -p task_1/data task_1/src
     output:
+    task_1/data and task_1/src created
+
 # 6. touch
-    function: 
-    output:
+    function: creates an empty file.
+    comman used: 
+    $ touch task_1/readme.md task_1/requirements.txt task_1/linux_commands.md task_1/setup_logs.md
+    output: 
+    empty readme,requirements,linux_commands and setup_logs files are created
+
 # 7. cat 
-    function: 
+    function: used to display the contents of a file.
+    command used:
+    $ cat task_1/requirements.txt
     output:
+    certifi==2026.6.17
+    charset-normalizer==3.4.7
+    idna==3.18
+    numpy==2.4.6
+    urllib3==2.7.0
+
 # 8. echo
-    function: 
+    function: prints text in the terminal and can also create content in a file.
+    command used:
+    $ echo "hello"
+    $ echo "hello" > task_1/data/sample_1
     output:
+    hello
+    when the 2nd command is executed "task_1/data/sample_1" is overwritten by "hello". (reverted using git restore)
+
 # 9. cp 
-    function: 
+    function: copies a file
+    command used:
+    $ cp task_1/data/sample.txt task_1/copy.txt
     output:
+    a new file "copy.txt" is created at Synergy_TP/task_1/copy.txt
+
 # 10. mv 
-    function: 
+    function: moves or renames files
+    command used:
+    $ mv task_1/src/hello.py bye.py
     output:
+    hello.py is renamed to bye.py and moved from Synergy_TP/task_1/src/hello.py to Synergy_TP.
+
 # 11. rm 
-    function: 
-    output:
+    function: used to delete files.
+    command used:
+    $ rm random.txt
+    output: 
+    removes random.txt from Synergy_TP
+    
 # 12. grep 
     function: 
     output:

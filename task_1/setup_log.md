@@ -17,5 +17,7 @@ pip install numpy
 pip freeze > task_1/requirements.txt
 # version control 
 git add .
+
 git commit -m "task_1 commit"
+
 git push origin main 

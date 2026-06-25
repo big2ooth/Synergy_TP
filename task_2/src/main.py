@@ -2,10 +2,10 @@ import sys
 from analyzer import *
 
 def main():
-    input_path = sys.argv[1]
-    output_path = sys.argv[2]
+    input_path = sys.argv[1] # getting input and output paths 
+    output_path = sys.argv[2] ##^^
 
-    submissions = read_submissions(input_path)
+    submissions = read_submissions(input_path) 
     submitted = get_submitted_students(submissions)
     missing = get_missing_submissions(submissions)
     avg = calculate_average_score(submissions)

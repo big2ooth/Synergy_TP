@@ -1,4 +1,4 @@
-## list of commands used 
+## List of commands used 
 # 1. pwd
     function: pwd prints the current working directory.
     command used: 
@@ -143,4 +143,3 @@
     output:
         removes execute permission from a file
         no output - success 
-        

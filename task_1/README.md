@@ -1,7 +1,6 @@
 # Task 1: GitHub, Virtual Environment, and Linux Basics
-*brief description*
-
-Task 1 involves familiarisation with git and linux basics. This folder demonstrates setting up a python project with a virtual environment, documenting linux commands and running a basic python script.
+*brief description* :
+ Task 1 involves familiarisation with git and linux basics. This folder demonstrates setting up a python project with a virtual environment, documenting linux commands and running a basic python script.
 
 # Setup instructions
     1. create the Synergy_TP repo and clone it within your IDE using git clone.
@@ -23,7 +22,7 @@ Task 1 involves familiarisation with git and linux basics. This folder demonstra
 
 # Steps to install requirements
     1. Use the standardised package manager "pip" to install required pacakages, using the following command:
-        pip install your package(Numpy in this case)
+        pip install yourpackage(Numpy in this case)
     2. After successful installation freeze all package dependencies to the "requirements.txt" file using:
         pip freeze > task_1/requirements.txt
 
@@ -32,7 +31,7 @@ Task 1 involves familiarisation with git and linux basics. This folder demonstra
     task_1/src/hello.py
     Therefore the command to run it would be:
         python task_1/src/hello.py
-    Expected output::
+    Expected output:
         Hello, World!
 
 

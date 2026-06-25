@@ -13,10 +13,10 @@
 # Observed terminal output 
 The following output is observed when the command '$ python task_2/src/main.py task_2/data/submissions.csv task_2/output/summary.json' is executed : 
 
-Total students: 7
-Submitted: 5
-Missing: 2
-Average score: 6.8
-Highest scorer: Isha (9)
-Missing submissions: ['Kabir', 'Dev']
-Summary written to task_2/output/summary.json
+Total students: 7\
+Submitted: 5\
+Missing: 2\
+Average score: 6.8\
+Highest scorer: Isha (9)\
+Missing submissions: ['Kabir', 'Dev']\
+Summary written to task_2/output/summary.json\

@@ -1,5 +1,6 @@
 # Task 1: GitHub, Virtual Environment, and Linux Basics
 *brief description*
+
 Task 1 involves familiarisation with git and linux basics. This folder demonstrates setting up a python project with a virtual environment, documenting linux commands and running a basic python script.
 
 # Setup instructions

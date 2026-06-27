@@ -1,8 +1,3 @@
-"""
-validate_data.py
-Validation checks for the cleaned dataset.
-"""
-
 import pandas as pd
 
 VALID_DOMAINS = {"ML", "Web", "Electronics", "Mechanical"}

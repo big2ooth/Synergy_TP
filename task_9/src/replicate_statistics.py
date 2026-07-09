@@ -4,7 +4,7 @@ import pandas as pd
 
 group_cols = ["domain", "condition", "input_type", "input_value", "input_unit", "signal_unit"]  #grouping features in a list
 
-def load_Data(file_path: str)->pd.DataFrame:  #reading input csv 
+def load_data(file_path: str)->pd.DataFrame:  #reading input csv 
     df = pd.read_csv(file_path)
     return df 
 
@@ -16,7 +16,7 @@ def calculate_confidence_interval(mean: float, std: float, n: int)-> tuple[float
     margin = t_critical * standard_error
     return (mean - margin, mean + margin)
 
-def assign_stab_flag(coefficient_of_variation: float) -> str:
+def assign_stability_flag(coefficient_of_variation: float) -> str:
     if coefficient_of_variation is None or np.isnan(coefficient_of_variation):
         return "unreliable"
     if coefficient_of_variation<=0.05:
@@ -25,7 +25,7 @@ def assign_stab_flag(coefficient_of_variation: float) -> str:
         return "moderate"
     return "unstable"
 
-def replicate_stats(df: pd.DataFrame)->pd.DataFrame:
+def calculate_replicate_statistics(df: pd.DataFrame)->pd.DataFrame:
     records = []
     for group_keys, group_df in df.groupby(group_cols, dropna = False):
         signal_values = group_df["signal"].dropna()
@@ -47,7 +47,7 @@ def replicate_stats(df: pd.DataFrame)->pd.DataFrame:
             ci_lower, ci_upper = (np.nan, np.nan)
             coefficient_of_variation = np.nan
 
-        stability_flag = assign_stab_flag(coefficient_of_variation)
+        stability_flag = assign_stability_flag(coefficient_of_variation)
 
         record = dict(zip(group_cols, group_keys))
         record.update({
@@ -69,6 +69,5 @@ def replicate_stats(df: pd.DataFrame)->pd.DataFrame:
     summary_df = pd.DataFrame(records)
     return summary_df
 
-def summary(summary_df: pd.DataFrame, output_path: str)->None:
+def save_replicate_summary(summary_df: pd.DataFrame, output_path: str)->None:
     summary_df.to_csv(output_path,index=False)
-    
